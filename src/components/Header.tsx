@@ -39,10 +39,13 @@ export default function Header() {
     <div
       className={`${
         isScrolled ? "md:bg-iris_purple" : "md:bg-transparent"
-      } md:fixed z-20  transition-colors duration-300 bg-iris_purple w-full`}
+      } md:fixed z-20  transition-colors duration-300 bg-iris_purple w-full shadow-lg`}
     >
       <div className="flex items-center justify-between mx-3 min-w-fit">
-        <Link to={navItems[0].path} className="md:mr-96 whitespace-nowrap">
+        <Link
+          to={navItems[0].path}
+          className="md:mr-96 whitespace-nowrap md:font-extrabold text-white text-2xl"
+        >
           Gîte les Iris
         </Link>
         <nav className="flex md:w-full">
