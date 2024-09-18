@@ -7,10 +7,10 @@ interface LayoutProps {
 export default function Layout({ children }: LayoutProps) {
   return (
     <>
-      <div className="bg-purple-700"></div>
+      <div></div>
       <Header />
       {/* <MobileHeader /> */}
-      <main className="bg-pink-600">{children}</main>
+      <main>{children}</main>
       <Footer />
     </>
   );

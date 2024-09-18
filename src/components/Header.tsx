@@ -10,14 +10,17 @@ export default function Header() {
   ];
   const renderNavItem = navItems.map((navItem) => (
     <li className="capitalize mt-7 md:mt-0">
-      <Link className="hover:underline text-white" to={navItem.path}>
+      <Link
+        className="hover:underline text-center text-iris_yellow"
+        to={navItem.path}
+      >
         {navItem.name}
       </Link>
     </li>
   ));
-  const irisColor = "bg-[#5A4FCF]";
+
   return (
-    <div className={irisColor}>
+    <div className="bg-iris_purple">
       <div className="flex items-center justify-between mx-3 min-w-fit">
         <Link to={navItems[0].path} className="md:mr-96 whitespace-nowrap">
           Gîte les Iris
@@ -31,9 +34,7 @@ export default function Header() {
               <div className="w-6 h-1 bg-white"></div>
               <div className="w-6 h-1 bg-white"></div>
               <div className="w-6 h-1 bg-white"></div>
-              <ul
-                className={`${irisColor} w-screen text-white pb-10 absolute -top-full right-0 group-focus:top-12 duration-150 flex flex-col space-y-3 justify-end`}
-              >
+              <ul className=" w-screen bg-iris_purple  pb-10 absolute -top-full right-0 group-focus:top-12 duration-150 flex flex-col space-y-3 justify-end">
                 {renderNavItem}
               </ul>
             </button>
