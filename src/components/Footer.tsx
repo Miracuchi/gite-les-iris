@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="bg-iris_purple text-center items-center text-iris_yellow">
+    <footer className="bg-iris_purple text-center items-center text-white">
       <div className="mx-3 flex flex-col space-y-3 py-5 md:w-9/12 md:mx-auto">
         <span className="md:text-left">
           Here will be language selector dropdown
