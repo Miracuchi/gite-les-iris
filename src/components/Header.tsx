@@ -3,15 +3,15 @@ import { Link } from "react-router-dom";
 export default function Header() {
   const navItems = [
     { name: "accueil", path: "/" },
-    { name: "à propos", path: "/a-propos" },
+    { name: "à propos", path: "/about" },
     { name: "contact", path: "/contact" },
-    { name: "louer", path: "/louer" },
+    { name: "louer", path: "/rent" },
     { name: "gallery", path: "/gallery" },
   ];
   const renderNavItem = navItems.map((navItem) => (
     <li className="capitalize mt-7 md:mt-0">
       <Link
-        className="hover:underline text-center text-iris_yellow"
+        className="hover:underline text-center text-white"
         to={navItem.path}
       >
         {navItem.name}
