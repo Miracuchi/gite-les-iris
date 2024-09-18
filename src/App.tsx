@@ -2,19 +2,28 @@ import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import "./index.css";
+import NotFound from "./pages/404";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Gallery from "./pages/Gallery";
+import Home from "./pages/Home";
+import Rent from "./pages/Rent";
 
 function App() {
-  // const [count, setCount] = useState(0);
-  // const banner = "/src/assets/ressources/bannerIris 2.jpg";
   return (
     <Router>
       <header>
         <Header />
-        {/* <MobileHeader /> */}
       </header>
-      <main>
+      <main className="bg-slate-300">
         <Routes>
-          <Route></Route>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/rent" element={<Rent />} />
+          <Route path="/gallery" element={<Gallery />} />
+          {/* Route pour la page 404 */}
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
       <footer>
