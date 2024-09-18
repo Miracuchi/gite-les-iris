@@ -2,7 +2,7 @@ export default function Hero() {
   return (
     <section
       datatype="hero"
-      className="relative h-screen bg-cover bg-center bg-no-repeat"
+      className="relative h-[90vh] bg-cover bg-center bg-no-repeat"
       style={{
         backgroundImage: 'url("/src/assets/ressources/bannerIris.jpg")',
       }}
@@ -13,7 +13,8 @@ export default function Hero() {
           Bienvenue au Gîte les Iris
         </h1>
         <p className="text-lg md:text-2xl mb-10">
-          Un havre de paix au cœur de la campagne
+          Nous serons ravis de vous accueillir dans notre gîte situé à Crécy la
+          chapelle (77).
         </p>
         <button className="px-6 py-3 bg-iris_yellow text-black font-semibold rounded-lg hover:bg-opacity-90 transition">
           Réserver maintenant
