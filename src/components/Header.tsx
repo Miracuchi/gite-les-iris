@@ -1,15 +1,10 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { navItems } from "../data/data";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
-  const navItems = [
-    { name: "accueil", path: "/" },
-    { name: "à propos", path: "/about" },
-    { name: "contact", path: "/contact" },
-    { name: "louer", path: "/rent" },
-    { name: "gallery", path: "/gallery" },
-  ];
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 0) {
@@ -48,7 +43,7 @@ export default function Header() {
         >
           Gîte les Iris
         </Link>
-        <nav className="flex md:w-full">
+        <nav className="flex md:w-full md:mr-10">
           <ul className="md:flex md:justify-between md:w-full md:my-5 hidden">
             {renderNavItem}
           </ul>
