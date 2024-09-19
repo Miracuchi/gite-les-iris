@@ -1,11 +1,12 @@
 import Card from "../components/Card";
 import Hero from "../components/Hero";
+import { cardData } from "../data/data";
 
 export default function Home() {
   return (
-    <div className="">
+    <section>
       <Hero />
-      <Card />
+      <Card cardData={cardData} />
       <img
         src="/src/assets/ressources/bookingAward.jpg"
         alt=""
@@ -15,6 +16,6 @@ export default function Home() {
       <p className="mt-5 text-lg">
         Votre destination de rêve pour des vacances inoubliables.
       </p> */}
-    </div>
+    </section>
   );
 }
