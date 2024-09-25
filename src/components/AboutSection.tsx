@@ -20,7 +20,7 @@ export default function AboutSection() {
   ];
   return (
     <>
-      <div className=" py-10 px-5 md:px-10 md:pt-16 lg:px-20">
+      <div className=" py-10 px-5 md:px-10 lg:px-20">
         <h1 className="text-center text-3xl font-bold mb-6">Le Gîte</h1>
         <p className="text-lg mb-6">
           Studio d'une surface de 35m² pouvant accueillir jusqu'à 6 personnes.
