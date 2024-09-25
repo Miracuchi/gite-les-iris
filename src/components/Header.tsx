@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { navItems } from "../data/data";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
-
+  const location = useLocation();
+  const isHomePage = location.pathname === "/";
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 0) {
@@ -20,21 +21,18 @@ export default function Header() {
     };
   }, []);
   const renderNavItem = navItems.map((navItem) => (
-    <li className="capitalize mt-7 md:mt-0">
-      <Link
-        className="hover:underline text-center text-white"
-        to={navItem.path}
-      >
-        {navItem.name}
-      </Link>
+    <li className="capitalize mt-7 md:mt-0 hover:underline hover:text-iris_yellow text-center text-white ">
+      <Link to={navItem.path}>{navItem.name}</Link>
     </li>
   ));
 
   return (
     <div
       className={`${
-        isScrolled ? "md:bg-iris_purple" : "md:bg-transparent"
-      } md:fixed z-20  transition-colors duration-300 bg-iris_purple w-full shadow-lg`}
+        isScrolled || !isHomePage
+          ? "md:bg-iris_purple shadow-lg"
+          : "md:bg-transparent"
+      } md:fixed z-20  transition-colors duration-300 bg-iris_purple w-full `}
     >
       <div className="flex items-center justify-between mx-3 min-w-fit">
         <Link

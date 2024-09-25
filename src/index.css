@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh; /* Assure que le conteneur principal prend au moins toute la hauteur de la fenêtre */
+}

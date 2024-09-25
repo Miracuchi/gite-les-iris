@@ -15,7 +15,7 @@ function App() {
       <header>
         <Header />
       </header>
-      <main className="bg-slate-300 overflow-x-hidden">
+      <main className="bg-slate-300 overflow-x-hidden min-h-[100vh]">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
