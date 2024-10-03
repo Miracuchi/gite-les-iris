@@ -45,12 +45,12 @@ export default function Header() {
           <ul className="md:flex md:justify-between md:w-full md:my-5 hidden">
             {renderNavItem}
           </ul>
-          <div className="flex flex-col items-end z-20">
+          <div className="flex flex-col items-end z-20 ">
             <button className="space-y-1 group md:hidden my-5">
               <div className="w-6 h-1 bg-iris_yellow"></div>
               <div className="w-6 h-1 bg-iris_yellow"></div>
               <div className="w-6 h-1 bg-iris_yellow"></div>
-              <ul className=" w-screen bg-iris_purple  pb-10 absolute -top-full right-0 group-focus:top-12 duration-150 flex flex-col space-y-3 justify-end">
+              <ul className=" w-screen bg-iris_purple  pb-10 absolute -top-full right-0 group-focus:top-12 duration-150 flex flex-col space-y-3 justify-end shadow-xl">
                 {renderNavItem}
               </ul>
             </button>

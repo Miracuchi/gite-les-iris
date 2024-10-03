@@ -30,7 +30,7 @@ export default function GallerySection({
         {galleryData.slides.map((card, index) => (
           <div
             key={index}
-            className="flex flex-col items-center hover:scale-110 duration-300"
+            className="flex flex-col items-center md:hover:scale-110 duration-300"
           >
             <img
               src={card}
