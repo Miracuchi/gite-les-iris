@@ -61,18 +61,8 @@ export default function GallerySection({
             closeModal={closeModal}
             slides={galleryData.slides}
             currentImageIndex={currentImageIndex}
+            setCurrentImageIndex={setCurrentImageIndex}
           />
-          <div className="md:flex hidden gap-5 w-[75%] mx-auto cursor-pointer justify-center mt-2">
-            {galleryData.slides.map((card, index) => (
-              <div key={index} className="">
-                <img
-                  src={card}
-                  className="rounded-sm h-16 w-16 object-cover mx-auto"
-                  onClick={() => openModal(index)}
-                />
-              </div>
-            ))}
-          </div>
         </div>
       </Modal>
     </section>
