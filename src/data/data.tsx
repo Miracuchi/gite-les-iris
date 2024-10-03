@@ -21,7 +21,7 @@ export const navItems = [
   { name: "accueil", path: "/" },
   { name: "à propos", path: "/about" },
   { name: "contact", path: "/contact" },
-  { name: "louer", path: "/rent" },
+  { name: "Activités", path: "/activities" },
   { name: "galerie", path: "/gallery" },
 ];
 const imagesStudio = Object.keys(

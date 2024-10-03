@@ -4,10 +4,10 @@ import Header from "./components/Header";
 import "./index.css";
 import NotFound from "./pages/404";
 import About from "./pages/About";
+import Activities from "./pages/Activities";
 import Contact from "./pages/Contact";
 import Gallery from "./pages/Gallery";
 import Home from "./pages/Home";
-import Rent from "./pages/Rent";
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/rent" element={<Rent />} />
+          <Route path="/activities" element={<Activities />} />
           <Route path="/gallery" element={<Gallery />} />
           {/* Route pour la page 404 */}
           <Route path="*" element={<NotFound />} />
