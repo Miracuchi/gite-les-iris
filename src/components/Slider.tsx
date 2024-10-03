@@ -117,7 +117,7 @@ export default function ImageSlider({
         >
           <MdDoubleArrow />
         </button>
-      </div>{" "}
+      </div>
       <div className="md:flex hidden gap-5 w-[75%] mx-auto cursor-pointer justify-center mt-2">
         {slides.map((card, index) => (
           <div key={index} className="">
