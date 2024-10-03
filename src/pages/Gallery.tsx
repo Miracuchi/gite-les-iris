@@ -1,4 +1,5 @@
 import GallerySection from "../components/GallerySection";
+import Slider from "../components/Slider";
 import {
   aroundCrecyData,
   cityCrecyData,
@@ -16,6 +17,9 @@ export default function Gallery() {
         Explorez notre galerie pour voir des photos de notre gîte et des
         environs.
       </p>
+      <Slider slides={studioSliderData.slides} />
+      <Slider slides={cityCrecyData.slides} />
+
       <GallerySection galleryData={studioSliderData} />
       <GallerySection galleryData={cityCrecyData} />
 
