@@ -51,25 +51,24 @@ export default function ContactForm({ className }: { className: string }) {
 
   return (
     <section className={`md:w-[50%] mx-5 ${className}`}>
-      <div className="text-center py-10 md:mx-3 w-full">
-        <h1 className="text-3xl font-bold mb-4">
-          Pour prendre contact directement
-        </h1>
+      <div className="text-center md:py-5 py-5 md:mx-3 w-full">
+        <h1 className="text-3xl font-bold mb-4">Posez une question</h1>
+
         <div className="text-right mb-4 -mt-3">* (champs obligatoire)</div>
         <form className="max-w-lg mx-auto" onSubmit={sendEmail}>
           <div className="mb-4 relative">
             <label htmlFor="name" className="block text-left mb-2">
               Nom*
             </label>
-            <span className="absolute inset-y-0 left-0 top-8 flex items-center pl-3">
-              <FaUser className="text-iris_purple h-5 w-5" />
+            <span className="absolute inset-y-0 left-0 top-8 flex items-center p-2 bg-white rounded-s">
+              <FaUser className="text-iris_purple h-5 w-5 " />
             </span>
             <input
               type="text"
               value={formData.from_name}
               name="from_name"
               onChange={handleChange}
-              className="w-full px-3 pl-10 py-2 border rounded"
+              className="w-full px-3 pl-10 py-2 border bg-transparent rounded placeholder-slate-300"
               placeholder="Votre nom"
               required
             />
@@ -78,7 +77,7 @@ export default function ContactForm({ className }: { className: string }) {
             <label htmlFor="email" className="block text-left mb-2">
               Email*
             </label>
-            <span className="absolute inset-y-0 left-0 top-8 flex items-center pl-3">
+            <span className="absolute inset-y-0 left-0 top-8 flex items-center p-2 bg-white rounded-s">
               <MdEmail className="text-iris_purple h-5 w-5" />
             </span>
             <input
@@ -86,7 +85,7 @@ export default function ContactForm({ className }: { className: string }) {
               onChange={handleChange}
               type="email"
               name="email"
-              className="w-full px-3 py-2 border rounded pl-10"
+              className="w-full px-3 py-2 border rounded pl-10 bg-transparent placeholder-slate-300"
               placeholder="Votre email"
               required
             />
@@ -99,7 +98,7 @@ export default function ContactForm({ className }: { className: string }) {
               name="message"
               value={formData.message}
               onChange={handleChange}
-              className="w-full px-3 py-2 border rounded"
+              className="w-full px-3 py-2 border rounded bg-transparent placeholder-slate-300"
               placeholder="Votre message"
               rows={4}
               required
