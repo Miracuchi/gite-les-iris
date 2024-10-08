@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { navItems } from "../data/data";
+import Button from "./Button";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -23,9 +24,15 @@ export default function Header() {
   const renderNavItem = navItems.map((navItem, index) => (
     <li
       key={index}
-      className="capitalize mt-7 md:mt-0 hover:underline hover:text-iris_yellow text-center text-white "
+      className="mt-7 text-center capitalize text-white md:mt-0 lg:hover:text-iris_yellow"
     >
-      <Link to={navItem.path}>{navItem.name}</Link>
+      {navItem.isButton ? (
+        <a href={navItem.path} target="_blank" rel="noopener noreferrer">
+          <Button text={navItem.name} />
+        </a>
+      ) : (
+        <Link to={navItem.path}>{navItem.name}</Link>
+      )}
     </li>
   ));
 
@@ -33,27 +40,29 @@ export default function Header() {
     <div
       className={`${
         isScrolled || !isHomePage
-          ? "md:bg-iris_purple shadow-lg"
+          ? "shadow-lg md:bg-iris_purple"
           : "md:bg-transparent"
-      } md:fixed z-20  transition-colors duration-300 bg-iris_purple w-full `}
+      } z-20 w-full bg-iris_purple transition-colors duration-300 md:fixed`}
     >
-      <div className="flex items-center justify-between mx-3 min-w-fit">
+      <div className="mx-3 flex min-w-fit items-center justify-between">
         <Link
           to={navItems[0].path}
-          className="md:mr-96 whitespace-nowrap md:font-extrabold text-white text-2xl"
+          className="flex items-center gap-x-2 whitespace-nowrap text-2xl text-white md:mr-48 md:font-extrabold"
         >
-          Gîte les Iris
+          <img src="/src/assets/pictures/iris.png" alt="" className="h-6" />
+          <span>Gîte les Iris</span>
         </Link>
-        <nav className="flex md:w-full md:mr-10">
-          <ul className="md:flex md:justify-between md:w-full md:my-5 hidden">
+
+        <nav className="flex md:mr-10 md:w-full">
+          <ul className="hidden md:my-3 md:flex md:w-full md:items-center md:justify-between">
             {renderNavItem}
           </ul>
-          <div className="flex flex-col items-end z-20 ">
-            <button className="space-y-1 group md:hidden my-5">
-              <div className="w-6 h-1 bg-iris_yellow"></div>
-              <div className="w-6 h-1 bg-iris_yellow"></div>
-              <div className="w-6 h-1 bg-iris_yellow"></div>
-              <ul className=" w-screen bg-iris_purple  pb-10 absolute -top-full right-0 group-focus:top-12 duration-150 flex flex-col space-y-3 justify-end shadow-xl">
+          <div className="z-20 flex flex-col items-end">
+            <button className="group my-5 space-y-1 md:hidden">
+              <div className="h-1 w-6 bg-iris_yellow"></div>
+              <div className="h-1 w-6 bg-iris_yellow"></div>
+              <div className="h-1 w-6 bg-iris_yellow"></div>
+              <ul className="absolute -top-full right-0 flex w-screen flex-col justify-end space-y-3 bg-iris_purple pb-10 shadow-xl duration-150 group-focus:top-12">
                 {renderNavItem}
               </ul>
             </button>

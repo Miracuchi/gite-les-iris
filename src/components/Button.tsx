@@ -7,19 +7,16 @@ export default function Button({
   type?: "submit";
   url?: string;
 }) {
+  const buttonClasseName =
+    "px-4 py-2 bg-iris_yellow text-black font-semibold rounded-full lg:hover:bg-[#d4bb00] transition";
   return (
     <>
       {url ? (
         <a href={url} target="_blank">
-          <button className="px-6 py-3 bg-iris_yellow text-black font-semibold rounded-lg lg:hover:bg-[#d4bb00] transition">
-            {text}
-          </button>
+          <button className={buttonClasseName}>{text}</button>
         </a>
       ) : (
-        <button
-          className="px-6 py-3 bg-iris_yellow text-black font-semibold rounded-lg lg:hover:bg-[#d4bb00] transition"
-          type={type}
-        >
+        <button className={buttonClasseName} type={type}>
           {text}
         </button>
       )}
