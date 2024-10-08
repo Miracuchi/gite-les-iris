@@ -7,6 +7,9 @@ export const cardData = [
     ],
     image: "/src/assets/pictures/crecy/crecy1.jpg",
   },
+];
+
+export const activitiesCardData = [
   {
     title: "Disneyland Paris",
     description: [
@@ -14,6 +17,77 @@ export const cardData = [
       "Venez profiter des attractions et de la magie de Disney dans ce parc à thème mondialement connu.",
     ],
     image: "/src/assets/pictures/around_crecy/disney.jpg",
+    link: "https://www.disneylandparis.com/fr-fr/destinations/parc-disneyland/",
+  },
+  {
+    title: "Le Parc Astérix",
+    description: [
+      "Le Parc Astérix est un détonnant mélange de 50 attractions et spectacles mis en scène dans 7 univers retraçant les aventures du célèbre gaulois.",
+    ],
+    image: "/src/assets/pictures/activities/parc_asterix.jpg",
+    link: "https://www.parcasterix.fr/",
+  },
+  {
+    title: "La Vallée Village",
+    description: [
+      "Ce village de marques haut de gamme vous propose une expérience shopping inédite et en plein air avec les plus belles marques de créateurs.",
+    ],
+    image: "/src/assets/pictures/activities/vallee_village.jpg",
+    link: "https://www.thebicestercollection.com/la-vallee-village/fr",
+  },
+  {
+    title: "La mer de Sable",
+    description: [
+      `De la Vallée des Mississi'Ptits au Canyon du Colorado en passant par le Désert du Nouveau-Mexique, 
+plongez toute votre tribu au cœur de l'Epouvantable Mer de Sable !`,
+    ],
+    image: "/src/assets/pictures/activities/mer_de_sable.jpg",
+    link: "https://www.merdesable.fr/",
+  },
+  {
+    title: "Les parcs zoologiques de Lumigny",
+    description: [
+      `Avec le Parc des Félins, vous découvrirez plus de 300 animaux, avec 26 espèces de félins différentes, dont des tigres blancs, des panthères et des lynx.`,
+      `Dans le deuxième parc, Terre de Singes, vous pourrez y observer environ une cinquantaine de macaques et de nombreux autres primates d'Afrique, d'Amérique du Sud, ou bien d'Asie.`,
+    ],
+    image: "/src/assets/pictures/activities/lumigny_park.jpg",
+    link: "https://lumigny-safari-reserve.com/",
+  },
+  {
+    title: "Musée de la Grande Guerre",
+    description: [
+      `A Meaux, musée de référence, découvrez une riche collection d'objets dans un musée rénové.`,
+      `Le musée de la Grande Guerre, qui a ouvert ses portes le 11 novembre 2011 sur le territoire de la Première bataille de la Marne à Meaux, est le plus grand musée d’Europe sur la Première Guerre mondiale.`,
+    ],
+    image: "/src/assets/pictures/activities/musee-grande-guerre-meaux-2021.jpg",
+    link: "https://www.museedelagrandeguerre.com/",
+  },
+  {
+    title: "Ferra Botanica",
+    description: [
+      `Embarquez pour une aventure complète, émerveillez-vous dans la nature et transformez-vous en éco-citoyen.`,
+      `Vous empruntez l’ancienne voie de chemin de fer reliant Paris à Sézanne, fermée au milieu du siècle dernier, sur un tronçon de 7 kilomètres environ.`,
+    ],
+    image:
+      "/src/assets/pictures/activities/veloraildefrance_velo-rail-la-ferte-gaucher-seine-et-marne-77.jpg",
+    link: "https://www.ferrabotanica.com/",
+  },
+  {
+    title: "Koezio",
+    description: [
+      `Koezio est un parc de loisir, idéal pour vivre une expérience insolite en famille, entre amis ou entre collègues.`,
+    ],
+    image:
+      "/src/assets/pictures/activities/animations-koezio-au-centre-commercial-carre-senart.jpg",
+    link: "https://koezio.co/senart/",
+  },
+  {
+    title: "aquarium sea life",
+    description: [
+      `Préparez vous à un voyage fascinant dans les profondeurs de l'océan à travers 9 zones thématiques.`,
+    ],
+    image: "/src/assets/pictures/activities/sea_life.jpg",
+    link: "https://www.visitsealife.com/paris/",
   },
 ];
 
@@ -70,4 +144,50 @@ export const transportCrecyData = {
 export const parisData = {
   title: "Paris",
   slides: imagesParis,
+};
+
+export const activities = {
+  sectionName: "Activitie",
+  card: [
+    {
+      image: "/src/assets/pictures/around_crecy/disney.jpg",
+      link: "https://lumigny-safari-reserve.com/",
+    },
+    {
+      image: "/src/assets/pictures/commerces/intermarché.jpg",
+      link: "https://www.parcasterix.fr/",
+    },
+    {
+      image: "/src/assets/pictures/around_crecy/disney.jpg",
+      link: "https://lumigny-safari-reserve.com/",
+    },
+    {
+      image: "/src/assets/pictures/commerces/intermarché.jpg",
+      link: "https://www.parcasterix.fr/",
+    },
+    {
+      image: "/src/assets/pictures/around_crecy/disney.jpg",
+      link: "https://lumigny-safari-reserve.com/",
+    },
+    {
+      image: "/src/assets/pictures/commerces/intermarché.jpg",
+      link: "https://www.parcasterix.fr/",
+    },
+    {
+      image: "/src/assets/pictures/around_crecy/disney.jpg",
+      link: "https://lumigny-safari-reserve.com/",
+    },
+    {
+      image: "/src/assets/pictures/commerces/intermarché.jpg",
+      link: "https://www.parcasterix.fr/",
+    },
+    {
+      image: "/src/assets/pictures/around_crecy/disney.jpg",
+      link: "https://lumigny-safari-reserve.com/",
+    },
+    {
+      image: "/src/assets/pictures/commerces/intermarché.jpg",
+      link: "https://www.parcasterix.fr/",
+    },
+  ],
 };

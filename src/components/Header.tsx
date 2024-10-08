@@ -20,8 +20,11 @@ export default function Header() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  const renderNavItem = navItems.map((navItem) => (
-    <li className="capitalize mt-7 md:mt-0 hover:underline hover:text-iris_yellow text-center text-white ">
+  const renderNavItem = navItems.map((navItem, index) => (
+    <li
+      key={index}
+      className="capitalize mt-7 md:mt-0 hover:underline hover:text-iris_yellow text-center text-white "
+    >
       <Link to={navItem.path}>{navItem.name}</Link>
     </li>
   ));
