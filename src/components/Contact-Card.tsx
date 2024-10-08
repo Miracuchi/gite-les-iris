@@ -1,3 +1,8 @@
+import { FaPhone } from "react-icons/fa";
+import { IoMdPhonePortrait } from "react-icons/io";
+import { MdEmail } from "react-icons/md";
+import { giteAdress, gitePostalCode } from "../data/data";
+
 export default function ContactCard({
   className,
   shouldShadow,
@@ -5,29 +10,52 @@ export default function ContactCard({
   shouldShadow: boolean;
   className?: string;
 }) {
+  const telTo = [
+    {
+      contactIcon: <IoMdPhonePortrait />,
+      contactInfo: "+33 6 87 38 64 95",
+      isPhone: true,
+    },
+    {
+      contactIcon: <FaPhone />,
+      contactInfo: "+33 9 75 25 41 12",
+      isPhone: true,
+    },
+    {
+      contactIcon: <MdEmail />,
+      contactInfo: "gestion@locationstudiocrecy.fr",
+      isPhone: false,
+    },
+  ];
   return (
     <>
       <div
-        className={`mb-12 bg-iris_purple h-full mx-5 p-5 rounded-xl md:mt-16 text-black text-center ${
+        className={`mx-5 mb-12 h-full rounded-xl bg-iris_purple p-5 text-white md:mt-16 ${
           shouldShadow ? "shadow-lg" : "shadow-none"
         } ${className}`}
       >
-        <h1 className="text-2xl mb-2">Contactez-nous</h1>
+        <h1 className="mb-2 text-2xl">Contactez-nous</h1>
         <p>Gîte les iris</p>
         <p> Aïdée SANCHEZ</p>
-        <p>44 bis rue de Montbarbin</p>
-        <p>77580 CRECY LA CHAPELLE</p>
-        <p className="mt-3">Téléphone : </p>
-        <p>+33 6 87 38 64 95</p>
-        <p>+33 9 75 25 41 12</p>
-        <p>
-          <a
-            href="mailto:gestion@locationstudiocrecy.fr"
-            className="underline text-blue-300"
-          >
-            gestion@locationstudiocrecy.fr
-          </a>
-        </p>
+        <p>{giteAdress}</p>
+        <p>{gitePostalCode}</p>
+        <p className="mb-2 mt-3">Téléphone : </p>
+        {telTo.map((tel) => (
+          <>
+            <p className="flex items-center justify-start text-white underline lg:hover:text-iris_yellow">
+              <span className="mr-2">{tel.contactIcon}</span>
+              <a
+                href={
+                  tel.isPhone
+                    ? `tel:${tel.contactInfo}`
+                    : `mailto:${tel.contactInfo}`
+                }
+              >
+                {tel.contactInfo}
+              </a>
+            </p>
+          </>
+        ))}
       </div>
     </>
   );

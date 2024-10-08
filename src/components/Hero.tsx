@@ -12,11 +12,11 @@ export default function Hero() {
     >
       <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
-      <div className="relative z-10 flex flex-col justify-center items-center text-center h-full text-white">
-        <h1 className="text-5xl md:text-7xl font-bold mb-5">
+      <div className="relative z-10 flex h-full flex-col items-center justify-center text-center text-white">
+        <h1 className="mb-5 text-5xl font-bold md:text-7xl">
           Bienvenue au Gîte les Iris
         </h1>
-        <p className="text-lg md:text-2xl mb-10">
+        <p className="mb-10 text-lg md:text-2xl">
           Nous serons ravis de vous accueillir dans notre gîte situé à Crécy la
           chapelle (77).
         </p>
