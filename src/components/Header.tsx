@@ -37,7 +37,7 @@ export default function Header() {
   ));
 
   return (
-    <div
+    <header
       className={`${
         isScrolled || !isHomePage
           ? "shadow-lg md:bg-iris_purple"
@@ -69,6 +69,6 @@ export default function Header() {
           </div>
         </nav>
       </div>
-    </div>
+    </header>
   );
 }

@@ -12,7 +12,7 @@ export default function Hero() {
     >
       <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
-      <div className="relative z-10 flex h-full flex-col items-center justify-center text-center text-white">
+      <div className="relative flex h-full flex-col items-center justify-center text-center text-white">
         <h1 className="mb-5 text-5xl font-bold md:text-7xl">
           Bienvenue au Gîte les Iris
         </h1>
