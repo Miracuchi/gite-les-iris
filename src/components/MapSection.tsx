@@ -74,7 +74,7 @@ export default function MapSection() {
         center={gitePosition}
         zoom={13}
         scrollWheelZoom={false}
-        className="z-0 mx-auto h-[60vh] w-full rounded-lg md:h-[70vh] md:w-[70vw]"
+        className="z-0 mx-auto h-[60vh] w-full rounded-lg shadow-lg md:h-[70vh] md:w-[70vw]"
       >
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

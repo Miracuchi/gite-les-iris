@@ -67,7 +67,7 @@ export default function ImageSlider({
   return (
     <>
       <div
-        className="flex justify-center items-center mx-3 md:mx-0 "
+        className="mx-3 flex items-center justify-center md:mx-0"
         onClick={closeModal}
       >
         <button
@@ -77,16 +77,16 @@ export default function ImageSlider({
           }}
           className={`hidden md:flex ${arrowCss}`}
         >
-          <MdDoubleArrow className="transform rotate-180 " />
+          <MdDoubleArrow className="rotate-180 transform" />
         </button>
         <div
-          className="overflow-hidden relative max-h-full mt-10 md:h-[450px] md:max-w-[50%]"
+          className="relative mt-10 max-h-full overflow-hidden md:h-[450px] md:max-w-[50%]"
           onTouchStart={handleTouchStart}
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
         >
           <div
-            className={`flex transition ease-out duration-40 `}
+            className={`duration-40 flex transition ease-out`}
             style={{
               transform: `translateX(-${currentSlideIndex * 100}%)`,
             }}
@@ -98,10 +98,10 @@ export default function ImageSlider({
                     e.stopPropagation();
                   }}
                   key={i}
-                  className="flex-shrink-0 w-full mx-0 md:h-[450px] md:w-full md:object-cover md:object-center"
+                  className="mx-0 w-full flex-shrink-0 md:h-[450px] md:w-full md:object-cover md:object-center"
                 >
                   <a href={s} target="_blank">
-                    <img src={s} className="max-w-full max-h-full mx-auto" />
+                    <img src={s} className="mx-auto max-h-full max-w-full" />
                   </a>
                 </div>
               );
@@ -118,12 +118,12 @@ export default function ImageSlider({
           <MdDoubleArrow />
         </button>
       </div>
-      <div className="md:flex hidden gap-5 w-[75%] mx-auto cursor-pointer justify-center mt-2">
+      <div className="mx-auto mt-2 hidden w-[75%] cursor-pointer justify-center gap-5 md:flex">
         {slides.map((card, index) => (
           <div key={index} className="">
             <img
               src={card}
-              className={`rounded-sm h-16 w-16 object-cover mx-auto ${
+              className={`mx-auto h-16 w-16 rounded-sm object-cover ${
                 currentSlideIndex === index
                   ? "border-4 border-iris_yellow p-1"
                   : ""
