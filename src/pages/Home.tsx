@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import myImg from "../assets/pictures/bookingAward.jpg";
 import Card from "../components/Card";
 import Hero from "../components/Hero";
 import MapSection from "../components/MapSection";
@@ -33,7 +34,7 @@ export default function Home() {
         <MapSection />
       </div>
       <img
-        src="/src/assets/pictures/bookingAward.jpg"
+        src={myImg}
         alt=""
         className="mx-auto my-10 w-[50%] rounded-lg shadow-lg md:w-[20%]"
       />

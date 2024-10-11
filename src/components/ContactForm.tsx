@@ -1,10 +1,11 @@
 import emailjs from "emailjs-com";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { FaUser } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import Button from "../components/Button";
-import { buttonText } from "../data/constant";
+import { LanguageContext } from "./LanguageContext";
 export default function ContactForm({ className }: { className: string }) {
+  const { translations } = useContext(LanguageContext);
   const [formData, setFormData] = useState({
     from_name: "",
     email: "",
@@ -13,7 +14,7 @@ export default function ContactForm({ className }: { className: string }) {
   });
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -31,7 +32,7 @@ export default function ContactForm({ className }: { className: string }) {
         serviceID, // Remplace avec ton service_id
         templateID, // Remplace avec ton template_id
         formData,
-        userID // Remplace avec ton user_id
+        userID, // Remplace avec ton user_id
       )
       .then((response) => {
         console.log(
@@ -39,7 +40,7 @@ export default function ContactForm({ className }: { className: string }) {
           response.status,
           response.text,
           response,
-          formData
+          formData,
         );
         alert("Email envoyé avec succès !");
       })
@@ -50,62 +51,64 @@ export default function ContactForm({ className }: { className: string }) {
   };
 
   return (
-    <section className={`md:w-[50%] mx-5 ${className}`}>
-      <div className="text-center md:py-5 py-5 md:mx-3 w-full">
-        <h1 className="text-3xl font-bold mb-4">Posez une question</h1>
+    <section className={`mx-5 md:w-[50%] ${className}`}>
+      <div className="w-full py-5 text-center md:mx-3 md:py-5">
+        <h1 className="mb-4 text-3xl font-bold">
+          {translations.message_sentence}
+        </h1>
 
-        <div className="text-right mb-4 -mt-3">* (champs obligatoire)</div>
-        <form className="max-w-lg mx-auto" onSubmit={sendEmail}>
-          <div className="mb-4 relative">
-            <label htmlFor="name" className="block text-left mb-2">
-              Nom*
+        <div className="-mt-3 mb-4 text-right">* ({translations.required})</div>
+        <form className="mx-auto max-w-lg" onSubmit={sendEmail}>
+          <div className="relative mb-4">
+            <label htmlFor="name" className="mb-2 block text-left">
+              {translations.name}*
             </label>
-            <span className="absolute inset-y-0 left-0 top-8 flex items-center p-2 bg-white rounded-s">
-              <FaUser className="text-iris_purple h-5 w-5 " />
+            <span className="absolute inset-y-0 left-0 top-8 flex items-center rounded-s bg-white p-2">
+              <FaUser className="h-5 w-5 text-iris_purple" />
             </span>
             <input
               type="text"
               value={formData.from_name}
               name="from_name"
               onChange={handleChange}
-              className="w-full px-3 pl-10 py-2 border bg-transparent rounded placeholder-slate-300"
-              placeholder="Votre nom"
+              className="w-full rounded border bg-transparent px-3 py-2 pl-10 placeholder-slate-300"
+              placeholder={translations.name as string}
               required
             />
           </div>
-          <div className="mb-4 relative">
-            <label htmlFor="email" className="block text-left mb-2">
-              Email*
+          <div className="relative mb-4">
+            <label htmlFor="email" className="mb-2 block text-left">
+              {translations.email}*
             </label>
-            <span className="absolute inset-y-0 left-0 top-8 flex items-center p-2 bg-white rounded-s">
-              <MdEmail className="text-iris_purple h-5 w-5" />
+            <span className="absolute inset-y-0 left-0 top-8 flex items-center rounded-s bg-white p-2">
+              <MdEmail className="h-5 w-5 text-iris_purple" />
             </span>
             <input
               value={formData.email}
               onChange={handleChange}
               type="email"
               name="email"
-              className="w-full px-3 py-2 border rounded pl-10 bg-transparent placeholder-slate-300"
-              placeholder="Votre email"
+              className="w-full rounded border bg-transparent px-3 py-2 pl-10 placeholder-slate-300"
+              placeholder={translations.email as string}
               required
             />
           </div>
           <div className="mb-4">
-            <label htmlFor="message" className="block text-left mb-2">
-              Message*
+            <label htmlFor="message" className="mb-2 block text-left">
+              {translations.message}*
             </label>
             <textarea
               name="message"
               value={formData.message}
               onChange={handleChange}
-              className="w-full px-3 py-2 border rounded bg-transparent placeholder-slate-300"
-              placeholder="Votre message"
+              className="w-full rounded border bg-transparent px-3 py-2 placeholder-slate-300"
+              placeholder={translations.message as string}
               rows={4}
               required
               style={{ resize: "none", height: "auto" }}
             ></textarea>
           </div>
-          <Button text={buttonText.send} type="submit" />
+          <Button text={translations.send as string} type="submit" />
         </form>
       </div>
     </section>

@@ -1,0 +1,72 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact",
+    "activities": "Activities",
+    "gallery": "Gallery"
+  },
+  "button": {
+    "rent": "Book Now",
+    "send": "Send",
+    "see_more": "See more"
+  },
+  "contact_card": { "phone": "Phone", "contact_us": "Contact us" },
+  "contact_form": {
+    "message": "Message",
+
+    "email": "Email",
+    "name": "Name",
+    "message_sentence": "Ask a question",
+    "required": "all field are required"
+  },
+  "about_section": {
+    "divers": "Miscellaneous",
+    "outside": "Outside",
+    "pets": "Pets",
+    "inside_items": [
+      "Air Conditioning",
+      "Entirely Non-Smoking Property",
+      "Heating"
+    ],
+    "outside_items": ["Garden", "Terrace", "Barbecue Facilities"],
+    "rule": "Pets are allowed on request and for an additional charge.",
+    "descriptions": [
+      "Studio with an area of 35m² accommodating up to 6 people.",
+      "The Gîte Les Iris is located 1 km from the center of Crécy-la-Chapelle, 15 minutes by car from Disneyland Paris, and 750 meters from the SNCF and bus station of Crécy-la-Chapelle. You can reach Paris Gare de l'Est by train or Chessy Marne la Vallée station (Disney, TGV, RER) by bus."
+    ]
+  },
+  "activities_section": {
+    "disneyland_paris_description": [
+      "Located just 15 minutes by car from Gîte Les Iris, Disneyland Paris is a must-visit destination.",
+      "Come enjoy the attractions and magic of Disney at this world-famous theme park."
+    ],
+    "parc_asterix_description": [
+      "Parc Astérix is an explosive mix of 50 attractions and shows staged in 7 universes recounting the adventures of the famous Gaul."
+    ],
+    "vallee_village_description": [
+      "This luxury outlet village offers you a unique outdoor shopping experience with the finest designer brands."
+    ],
+    "mer_de_sable_description": [
+      "From the Valley of Mississi'Ptits to the Colorado Canyon, dive your whole tribe into the heart of the Terrifying Sand Sea!"
+    ],
+    "parcs_zoologiques_de_lumigny_description": [
+      "With the Parc des Félins, you will discover over 300 animals, including 26 different species of felines, such as white tigers, panthers, and lynxes.",
+      "In the second park, Terre de Singes, you can observe about fifty macaques and many other primates from Africa, South America, and Asia."
+    ],
+    "musee_de_la_grande_guerre_description": [
+      "In Meaux, a reference museum, discover a rich collection of objects in a renovated museum.",
+      "The Great War Museum, which opened its doors on November 11, 2011, on the territory of the First Battle of the Marne in Meaux, is the largest museum in Europe dedicated to the First World War."
+    ],
+    "ferra_botanica_description": [
+      "Embark on a complete adventure, marvel at nature, and become an eco-citizen.",
+      "You will follow the old railway line connecting Paris to Sézanne, closed in the middle of the last century, on a stretch of about 7 kilometers."
+    ],
+    "koezio_description": [
+      "Koezio is a leisure park, ideal for having a unique experience with family, friends, or colleagues."
+    ],
+    "aquarium_sea_life_description": [
+      "Prepare for a fascinating journey into the depths of the ocean through 9 themed zones."
+    ]
+  }
+}

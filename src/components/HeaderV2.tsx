@@ -1,15 +1,25 @@
-import { useEffect, useRef, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
-import { navItems } from "../data/data";
-import Button from "./Button";
+import { useContext, useEffect, useRef, useState } from "react";
 
+import { Link, useLocation } from "react-router-dom";
+// import { navItems } from "../data/data";
+import Button from "./Button";
+import { LanguageContext } from "./LanguageContext";
+import LanguageDropdown from "./LanguageSelector";
 export default function Header() {
+  const { translations } = useContext(LanguageContext);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   const location = useLocation();
   const menuRef = useRef<HTMLUListElement | null>(null);
   const isHomePage = location.pathname === "/";
+
+  const navItems = [
+    { name: translations.home, path: "/" },
+    { name: translations.about, path: "/about" },
+    { name: translations.contact, path: "/contact" },
+    { name: translations.activities, path: "/activities" },
+    { name: translations.gallery, path: "/gallery" },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -94,14 +104,16 @@ export default function Header() {
           <nav className="flex lg:mr-10 lg:w-full">
             <ul className="hidden lg:my-3 lg:flex lg:w-full lg:items-center lg:justify-between">
               {renderNavItem}
-              {
-                <li className="flex h-full items-end justify-center">
-                  <Button
-                    text="Réserver maintenant"
-                    url="https://www.booking.com/hotel/fr/gite-les-iris.fr.html?aid=385785&label=metakayak-linkdsk-corefr-hotel-53810_los-05_bw-028_curr-EUR_nrm-01_gstadt-03_gstkid-01_lang-fr_sat-0_dow-sat_aff-0_mcid-10_clkid-OO9Eg6Edt5HiSydub2K5XQ&sid=bb7ff456fef040781ad50ef677b82f43&dest_id=663128;dest_type=hotel;dist=0;group_adults=2;group_children=0;hapos=1;hpos=1;no_rooms=1;req_adults=2;req_children=0;room1=A%2CA;sb_price_type=total;sr_order=popularity;srepoch=1727301921;srpvid=4be69b5370e70506;type=total;ucfs=1&"
-                  />
-                </li>
-              }
+
+              <li className="flex h-full items-end justify-center">
+                <Button
+                  text={translations.rent as string}
+                  url="https://www.booking.com/hotel/fr/gite-les-iris.fr.html?aid=385785&label=metakayak-linkdsk-corefr-hotel-53810_los-05_bw-028_curr-EUR_nrm-01_gstadt-03_gstkid-01_lang-fr_sat-0_dow-sat_aff-0_mcid-10_clkid-OO9Eg6Edt5HiSydub2K5XQ&sid=bb7ff456fef040781ad50ef677b82f43&dest_id=663128;dest_type=hotel;dist=0;group_adults=2;group_children=0;hapos=1;hpos=1;no_rooms=1;req_adults=2;req_children=0;room1=A%2CA;sb_price_type=total;sr_order=popularity;srepoch=1727301921;srpvid=4be69b5370e70506;type=total;ucfs=1&"
+                />
+              </li>
+              <li>
+                <LanguageDropdown />
+              </li>
             </ul>
 
             <div className="flex flex-col items-end lg:hidden">
@@ -110,7 +122,6 @@ export default function Header() {
                 onClick={toggleMenu}
                 className="group z-[1] my-4 cursor-pointer space-y-1 text-3xl text-black lg:hidden"
               >
-                {/* {isMenuOpen ? <IoClose /> : <RxHamburgerMenu />} */}
                 <div
                   className={`h-1 w-6 bg-iris_yellow transition-transform duration-300 ${isMenuOpen ? "translate-y-2 rotate-45" : ""}`}
                 ></div>
@@ -140,7 +151,7 @@ export default function Header() {
             onClick={toggleMenu}
           >
             <Button
-              text="Réserver maintenant"
+              text={translations.rent as string}
               url="https://www.booking.com/hotel/fr/gite-les-iris.fr.html?aid=385785&label=metakayak-linkdsk-corefr-hotel-53810_los-05_bw-028_curr-EUR_nrm-01_gstadt-03_gstkid-01_lang-fr_sat-0_dow-sat_aff-0_mcid-10_clkid-OO9Eg6Edt5HiSydub2K5XQ&sid=bb7ff456fef040781ad50ef677b82f43&dest_id=663128;dest_type=hotel;dist=0;group_adults=2;group_children=0;hapos=1;hpos=1;no_rooms=1;req_adults=2;req_children=0;room1=A%2CA;sb_price_type=total;sr_order=popularity;srepoch=1727301921;srpvid=4be69b5370e70506;type=total;ucfs=1&"
             />
           </li>
