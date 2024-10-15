@@ -10,7 +10,7 @@ export default function Button({
   className?: string;
 }) {
   const buttonClasseName =
-    "px-4 py-2 bg-iris_yellow text-black font-semibold rounded-full lg:hover:bg-[#d4bb00] transition";
+    "px-4 py-2 bg-iris_yellow text-black font-semibold rounded-lg lg:hover:bg-[#d4bb00] transition";
   return (
     <>
       {url ? (

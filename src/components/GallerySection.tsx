@@ -22,19 +22,19 @@ export default function GallerySection({
     setIsOpen(false);
   };
   return (
-    <section className="w-[75%] mx-auto">
-      <h3 className="mt-10 capitalize text-2xl font-bold mb-4 text-left">
+    <section className="mx-auto w-[75%]">
+      <h3 className="mb-4 mt-10 text-left text-2xl font-bold capitalize">
         {galleryData.title}
       </h3>
-      <div className="grid md:grid-cols-3 gap-5  mx-auto cursor-pointer">
+      <div className="mx-auto grid cursor-pointer gap-5 md:grid-cols-3">
         {galleryData.slides.map((card, index) => (
           <div
             key={index}
-            className="flex flex-col items-center md:hover:scale-110 duration-300"
+            className="flex flex-col items-center duration-300 md:hover:scale-110"
           >
             <img
               src={card}
-              className="rounded-2xl h-64 object-cover w-full"
+              className="h-64 w-full rounded-2xl object-cover"
               onClick={() => openModal(index)}
             />
           </div>
@@ -44,15 +44,15 @@ export default function GallerySection({
       <Modal
         isOpen={isOpen}
         onRequestClose={closeModal}
-        className="flex items-center justify-center w-full h-full z-30"
+        className="z-30 flex h-full w-full items-center justify-center"
         style={{
           overlay: { backgroundColor: "rgba(0, 0, 0, 0.90)" },
         }}
       >
-        <div className="relative h-[80vh] -mt-2">
+        <div className="relative -mt-2 h-[80vh]">
           <button
             onClick={closeModal}
-            className="absolute top-2 right-2 p-2 text-white"
+            className="absolute right-2 top-2 p-2 text-white"
           >
             X
           </button>

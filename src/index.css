@@ -9,3 +9,11 @@ body {
 #root {
   min-height: 100vh; /* Assure que le conteneur principal prend au moins toute la hauteur de la fenêtre */
 }
+
+.rotate-x-0 {
+  transform: rotateX(0deg);
+}
+
+.rotate-x-180 {
+  transform: rotateX(180deg);
+}

@@ -1,5 +1,5 @@
 import AboutSection from "../components/AboutSection";
-import ContactCard from "../components/Contact-Card";
+import ContactCard from "../components/ContactCard";
 import MapSection from "../components/MapSection";
 
 export default function About() {

@@ -1,0 +1,92 @@
+{
+  "navigation": {
+    "home": "Accueil",
+    "about": "À propos",
+    "contact": "Contact",
+    "activities": "Activités",
+    "gallery": "Galerie",
+    "location": "Localisation"
+  },
+  "not_found_page": {
+    "not_found_error": "404 - Page non trouvée",
+    "not_found_message": "Désolé, la page que vous recherchez n'existe pas. Veuillez vérifier l'URL ou revenir à la page d'accueil. Vous serez redirigé dans {countdown} secondes."
+  },
+  "hero_section": {
+    "welcome_message": "Bienvenue au Gîte les Iris",
+    "welcome_description": "Nous serons ravis de vous accueillir dans notre gîte situé à Crécy-la-Chapelle (77)."
+  },
+  "button": {
+    "rent": "Réserver maintenant",
+    "send": "Envoyer",
+    "see_more": "Voir plus"
+  },
+  "gallery_section": {
+    "title_studio": "Le Studio",
+    "title_aroundCrecy": "Autour de Crécy",
+    "title_shops": "Commerces",
+    "title_city": "La Ville",
+    "title_transport": "Les Transports",
+    "title_paris": "Paris"
+  },
+  "about_section": {
+    "divers": "Divers",
+    "outside": "En extérieur",
+    "pets": "Animaux domestiques",
+    "inside_items": [
+      "Climatisation",
+      "Établissement entièrement non-fumeurs",
+      "Chauffage"
+    ],
+    "outside_items": ["Jardin", "Terrasse", "Installations pour barbecue"],
+    "rule": "Les animaux de compagnie sont admis sur demande et avec un supplément.",
+    "descriptions": [
+      "Studio d'une surface de 35m² pouvant accueillir jusqu'à 6 personnes.",
+      "Le Gîte Les Iris se situe à 1 km du centre de Crécy-la-Chapelle, à 15 minutes en voiture de Disneyland Paris et à 750 mètres de la gare SNCF et routière de Crécy-la-Chapelle. Vous pourrez rejoindre Paris Gare de l'Est en train ou la gare de Chessy Marne la Vallée (Disney, TGV, RER) en bus."
+    ]
+  },
+  "contact_card": { "phone": "Téléphone", "contact_us": "Contactez-nous" },
+  "contact_form": {
+    "message": "Message",
+    "email": "Email",
+    "name": "Nom",
+    "message_sentence": "Posez une question",
+    "required": "tous les champs sont requis"
+  },
+  "activities_section": {
+    "home_description": [
+      "Le Gîte Les Iris se situe à 1 km du centre de Crécy-la-Chapelle, à 15 minutes en voiture de Disneyland Paris et à 750 mètres de la gare SNCF et routière de Crécy-la-Chapelle.",
+      "Vous pourrez rejoindre Paris gare de l'Est en train ou la gare de Chessy Marne la vallée (Disney, TGV, RER) en bus..."
+    ],
+    "disneyland_paris_description": [
+      "Situé à seulement 15 minutes en voiture du Gîte Les Iris, Disneyland Paris est une destination incontournable.\n",
+      "Venez profiter des attractions et de la magie de Disney dans ce parc à thème mondialement connu."
+    ],
+    "parc_asterix_description": [
+      "Le Parc Astérix est un détonnant mélange de 50 attractions et spectacles mis en scène dans 7 univers retraçant les aventures du célèbre gaulois."
+    ],
+    "vallee_village_description": [
+      "Ce village de marques haut de gamme vous propose une expérience shopping inédite et en plein air avec les plus belles marques de créateurs."
+    ],
+    "mer_de_sable_description": [
+      "De la Vallée des Mississi'Ptits au Canyon du Colorado en passant par le Désert du Nouveau-Mexique, plongez toute votre tribu au cœur de l'Epouvantable Mer de Sable !"
+    ],
+    "parcs_zoologiques_de_lumigny_description": [
+      "Avec le Parc des Félins, vous découvrirez plus de 300 animaux, avec 26 espèces de félins différentes, dont des tigres blancs, des panthères et des lynx.",
+      "Dans le deuxième parc, Terre de Singes, vous pourrez y observer environ une cinquantaine de macaques et de nombreux autres primates d'Afrique, d'Amérique du Sud, ou bien d'Asie."
+    ],
+    "musee_de_la_grande_guerre_description": [
+      "À Meaux, musée de référence, découvrez une riche collection d'objets dans un musée rénové.",
+      "Le musée de la Grande Guerre, qui a ouvert ses portes le 11 novembre 2011 sur le territoire de la Première bataille de la Marne à Meaux, est le plus grand musée d'Europe sur la Première Guerre mondiale."
+    ],
+    "ferra_botanica_description": [
+      "Embarquez pour une aventure complète, émerveillez-vous dans la nature et transformez-vous en éco-citoyen.",
+      "Vous empruntez l'ancienne voie de chemin de fer reliant Paris à Sézanne, fermée au milieu du siècle dernier, sur un tronçon de 7 kilomètres environ."
+    ],
+    "koezio_description": [
+      "Koezio est un parc de loisir, idéal pour vivre une expérience insolite en famille, entre amis ou entre collègues."
+    ],
+    "aquarium_sea_life_description": [
+      "Préparez-vous à un voyage fascinant dans les profondeurs de l'océan à travers 9 zones thématiques."
+    ]
+  }
+}

@@ -1,7 +1,9 @@
+import { useContext } from "react";
 import { FaPhone } from "react-icons/fa";
 import { IoMdPhonePortrait } from "react-icons/io";
 import { MdEmail } from "react-icons/md";
 import { giteAdress, gitePostalCode } from "../data/data";
+import { LanguageContext } from "./LanguageContext";
 
 export default function ContactCard({
   className,
@@ -10,6 +12,7 @@ export default function ContactCard({
   shouldShadow: boolean;
   className?: string;
 }) {
+  const { translations } = useContext(LanguageContext);
   const telTo = [
     {
       contactIcon: <IoMdPhonePortrait />,
@@ -34,12 +37,12 @@ export default function ContactCard({
           shouldShadow ? "shadow-lg" : "shadow-none"
         } ${className}`}
       >
-        <h1 className="mb-2 text-2xl">Contactez-nous</h1>
+        <h1 className="mb-2 text-2xl">{translations.contact_us}</h1>
         <p>Gîte les iris</p>
         <p> Aïdée SANCHEZ</p>
         <p>{giteAdress}</p>
         <p>{gitePostalCode}</p>
-        <p className="mb-2 mt-3">Téléphone : </p>
+        <p className="mb-2 mt-3">{translations.phone} : </p>
         {telTo.map((tel) => (
           <>
             <p className="flex items-center justify-start text-white underline lg:hover:text-iris_yellow">

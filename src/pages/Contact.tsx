@@ -1,10 +1,9 @@
-import ContactCard from "../components/Contact-Card";
+import ContactCard from "../components/ContactCard";
 import ContactForm from "../components/ContactForm";
 
 export default function Contact() {
   return (
     <section
-      datatype="hero"
       className="relative min-h-screen bg-cover bg-center bg-no-repeat md:h-screen"
       style={{
         backgroundImage:
@@ -14,8 +13,8 @@ export default function Contact() {
       {/* Overlay de fond pour assombrir */}
       <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
-      <div className="relative z-10 flex h-max flex-col items-center justify-center text-white">
-        <div className="relative z-10 mt-2 flex-col rounded-lg border-2 border-white bg-transparent md:mt-20 md:flex md:w-[60%] md:flex-row md:justify-evenly md:p-0 2xl:w-[50%]">
+      <div className="relative z-10 mx-auto my-auto flex h-max flex-col items-center justify-center text-white">
+        <div className="relative z-10 mt-2 w-[90%] flex-col rounded-lg border-2 border-white bg-transparent md:mt-20 md:flex md:w-[90%] md:flex-row md:justify-evenly md:p-0 lg:w-[60%] 2xl:w-[50%]">
           {/* Pseudo-élément pour flouter l'intérieur */}
           <div className="pointer-events-none absolute inset-0 rounded-lg bg-transparent backdrop-blur-sm"></div>
 
