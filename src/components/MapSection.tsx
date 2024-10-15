@@ -3,13 +3,16 @@ import L from "leaflet";
 import { renderToStaticMarkup } from "react-dom/server";
 import { TbBrandDisney } from "react-icons/tb";
 
+import { useContext } from "react";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { IoMdTrain } from "react-icons/io";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import { giteAdress, gitePostalCode } from "../data/data";
+import { LanguageContext } from "./LanguageContext";
 import Title from "./Title";
 
 export default function MapSection() {
+  const { translations } = useContext(LanguageContext);
   console.log(MapContainer);
   const gitePosition: LatLngExpression = [
     48.86222539169887, 2.9007509907140094,
@@ -28,7 +31,7 @@ export default function MapSection() {
     return icon;
   };
 
-  const arr = [
+  const mapMarkers = [
     {
       name: "Gite les Iris",
       position: gitePosition,
@@ -53,11 +56,9 @@ export default function MapSection() {
     let lat: number;
     let lng: number;
 
-    // Vérifie si position est un tableau (ex. [lat, lng])
     if (Array.isArray(position)) {
       [lat, lng] = position;
     } else {
-      // Si position est un objet, extrais les valeurs
       lat = position.lat;
       lng = position.lng;
     }
@@ -68,7 +69,7 @@ export default function MapSection() {
 
   return (
     <>
-      <Title titleSection="Localisation" />
+      <Title titleSection={translations.location as string} />
 
       <MapContainer
         center={gitePosition}
@@ -80,25 +81,25 @@ export default function MapSection() {
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        {arr.map((ar, i) => (
+        {mapMarkers.map((marker, i) => (
           <Marker
             key={i}
-            position={ar.position as LatLngExpression}
-            icon={ar.icon ? renderReactIcons(ar.icon) : undefined}
+            position={marker.position as LatLngExpression}
+            icon={marker.icon ? renderReactIcons(marker.icon) : undefined}
           >
             <Popup className="">
-              {ar.name}
+              {marker.name}
               <br />
-              {ar.adress.adress && ar.adress.adress}
+              {marker.adress.adress && marker.adress.adress}
               <br />
-              {ar.adress.postalCode}
+              {marker.adress.postalCode}
               <br />
               Coordonnées : <br />
               <span
-                onClick={() => openMapApp(ar.position as LatLngExpression)}
+                onClick={() => openMapApp(marker.position as LatLngExpression)}
                 className="cursor-pointer hover:underline"
               >
-                {ar.position[0]}, {ar.position[1]}
+                {marker.position[0]}, {marker.position[1]}
               </span>
             </Popup>
           </Marker>

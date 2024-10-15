@@ -1,15 +1,22 @@
-import { useRef } from "react";
+import { useContext, useRef } from "react";
 import myImg from "../assets/pictures/bookingAward.jpg";
 import Card from "../components/Card";
 import Hero from "../components/Hero";
+import { LanguageContext } from "../components/LanguageContext";
 import MapSection from "../components/MapSection";
-import { cardData } from "../data/data";
 import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
 
 export default function Home() {
+  const { translations } = useContext(LanguageContext);
   const cardRef = useRef(null);
   const mapRef = useRef(null);
-
+  const cardData = [
+    {
+      title: "Crecy La Chapelle",
+      description: translations.home_description as string[],
+      image: "/src/assets/pictures/crecy/crecy4.jpg",
+    },
+  ];
   const isCardVisible = useIntersectionObserver(cardRef, { threshold: 0.1 });
   const isMapVisible = useIntersectionObserver(mapRef, { threshold: 0.1 });
 

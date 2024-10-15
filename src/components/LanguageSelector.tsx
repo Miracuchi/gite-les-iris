@@ -1,24 +1,34 @@
-import { useContext } from "react";
-import { Language, LanguageContext } from "./LanguageContext";
+// import { useContext } from "react";
+// import { Language, LanguageContext } from "./LanguageContext";
 
-const LanguageDropdown = () => {
-  const { changeLanguage, currentLang } = useContext(LanguageContext);
+// const LanguageDropdown = () => {
+//   const { changeLanguage, currentLang } = useContext(LanguageContext);
 
-  const handleLanguageChange = (
-    event: React.ChangeEvent<HTMLSelectElement>,
-  ) => {
-    const selectedLanguage = event.target.value as Language;
-    changeLanguage(selectedLanguage);
-  };
+//   console.log(navigator.language);
 
-  return (
-    <div>
-      <select onChange={handleLanguageChange} value={currentLang}>
-        <option value="en">English</option>
-        <option value="fr">Français</option>
-      </select>
-    </div>
-  );
-};
+//   const handleLanguageChange = (
+//     event: React.ChangeEvent<HTMLSelectElement>,
+//   ) => {
+//     const selectedLanguage = event.target.value as Language;
+//     changeLanguage(selectedLanguage);
+//   };
 
-export default LanguageDropdown;
+//   return (
+//     <div>
+//       <select
+//         onChange={handleLanguageChange}
+//         value={currentLang}
+//         className="rounded-xl"
+//       >
+//         <option value="en" className="mt-5 bg-blue-600">
+//           English
+//         </option>
+//         <option value="fr" className="bg-black text-white">
+//           Français
+//         </option>
+//       </select>
+//     </div>
+//   );
+// };
+
+// export default LanguageDropdown;

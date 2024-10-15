@@ -4,8 +4,18 @@
     "about": "About",
     "contact": "Contact",
     "activities": "Activities",
+    "location": "Location",
     "gallery": "Gallery"
   },
+  "not_found_page": {
+    "not_found_error": "404 - Page not found",
+    "not_found_message": "Sorry, the page you are looking for does not exist. Please check the URL or return to the homepage. You will be redirected in {countdown} seconds."
+  },
+  "hero_section": {
+    "welcome_message": "Welcome to Gîte Les Iris",
+    "welcome_description": "We will be delighted to welcome you to our gîte located in Crécy-la-Chapelle (77)."
+  },
+
   "button": {
     "rent": "Book Now",
     "send": "Send",
@@ -19,6 +29,14 @@
     "name": "Name",
     "message_sentence": "Ask a question",
     "required": "all field are required"
+  },
+  "gallery_section": {
+    "title_studio": "The Studio",
+    "title_aroundCrecy": "Around Crécy",
+    "title_shops": "Shops",
+    "title_city": "The City",
+    "title_transport": "Transportation",
+    "title_paris": "Paris"
   },
   "about_section": {
     "divers": "Miscellaneous",
@@ -37,6 +55,10 @@
     ]
   },
   "activities_section": {
+    "home_description": [
+      "Gîte Les Iris is located 1 km from the center of Crécy-la-Chapelle, a 15-minute drive from Disneyland Paris, and 750 meters from the Crécy-la-Chapelle SNCF and bus station.",
+      "You can reach Paris Gare de l'Est by train or Chessy Marne-la-Vallée station (Disney, TGV, RER) by bus..."
+    ],
     "disneyland_paris_description": [
       "Located just 15 minutes by car from Gîte Les Iris, Disneyland Paris is a must-visit destination.",
       "Come enjoy the attractions and magic of Disney at this world-famous theme park."

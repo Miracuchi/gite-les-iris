@@ -2,6 +2,7 @@ import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Footer from "./components/Footer";
 import HeaderV2 from "./components/HeaderV2";
 import { LanguageProvider } from "./components/LanguageContext";
+import { MenuProvider } from "./components/MenuContext";
 import "./index.css";
 import NotFound from "./pages/404";
 import About from "./pages/About";
@@ -14,11 +15,13 @@ function App() {
   return (
     <Router>
       <LanguageProvider>
-        <header>
-          {/* <Header /> */}
-          <HeaderV2 />
-        </header>
-        <main className="min-h-[100vh] overflow-x-hidden bg-[#F5F5DC]">
+        <MenuProvider>
+          <header>
+            {/* <Header /> */}
+            <HeaderV2 />
+          </header>
+        </MenuProvider>
+        <main className="min-h-[100dvh] overflow-x-hidden bg-[#F5F5DC]">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />

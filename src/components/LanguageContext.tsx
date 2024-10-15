@@ -1,39 +1,51 @@
-import { createContext, ReactNode, useState } from "react";
+import { createContext, ReactNode, useEffect, useState } from "react";
 import enTranslations from "../translations/en.json";
 import frTranslations from "../translations/fr.json";
 
-// Définir le type des langues
 export type Language = "en" | "fr";
 
-// Définir un type général pour les traductions
 type GeneralTranslations = { [key: string]: string | string[] };
 
-// Définir le type du contexte
 interface LanguageContextProps {
   currentLang: Language;
   changeLanguage: (lang: Language) => void;
-  translations: GeneralTranslations; // Conserver le type général
+  translations: GeneralTranslations;
 }
+const { language: navigatorLanguage } = navigator;
+let defaultLanguage: Language;
 
-// Créer le contexte
+if (navigatorLanguage.startsWith("fr")) {
+  defaultLanguage = "fr";
+} else if (navigatorLanguage.startsWith("en")) {
+  defaultLanguage = "en";
+} else {
+  defaultLanguage = "en";
+}
 export const LanguageContext = createContext<LanguageContextProps>({
   currentLang: "en",
   changeLanguage: () => {},
-  translations: {}, // Valeur par défaut
+  translations: {},
 });
 
-// Créer le fournisseur de contexte
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
-  const [currentLang, setCurrentLang] = useState<Language>("en");
+  const [currentLang, setCurrentLang] = useState<Language>(
+    defaultLanguage as Language,
+  );
+
+  useEffect(() => {
+    const storedLanguage = sessionStorage.getItem("appLanguage") as Language;
+    if (storedLanguage) {
+      setCurrentLang(storedLanguage);
+    }
+  }, []);
 
   const changeLanguage = (lang: Language) => {
     setCurrentLang(lang);
+    sessionStorage.setItem("appLanguage", lang);
   };
 
-  // Utiliser les traductions en fonction de la langue actuelle
   const translations = currentLang === "en" ? enTranslations : frTranslations;
 
-  // Aplatir les traductions pour correspondre au type général
   const flattenedTranslations: GeneralTranslations = {
     ...translations.navigation,
     ...translations.button,
@@ -41,6 +53,9 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
     ...translations.activities_section,
     ...translations.contact_card,
     ...translations.contact_form,
+    ...translations.gallery_section,
+    ...translations.hero_section,
+    ...translations.not_found_page,
   };
 
   return (
@@ -48,7 +63,7 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
       value={{
         currentLang,
         changeLanguage,
-        translations: flattenedTranslations, // Utiliser les traductions aplaties ici
+        translations: flattenedTranslations,
       }}
     >
       {children}
