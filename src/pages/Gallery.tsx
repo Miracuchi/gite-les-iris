@@ -2,14 +2,27 @@ import { useContext } from "react";
 import GallerySection from "../components/GallerySection";
 import { LanguageContext } from "../components/LanguageContext";
 import Title from "../components/Title";
-import {
-  imagesAround,
-  imagesCity,
-  imagesCommerce,
-  imagesParis,
-  imagesStudio,
-  imagesTransport,
-} from "../data/data";
+
+const imagesStudio = Object.keys(
+  import.meta.glob("/assets/pictures/studio_pictures/*.{jpg,png,jpeg}"),
+);
+const imagesAround = Object.keys(
+  import.meta.glob("/src/assets/pictures/around_crecy/*.{jpg,png,jpeg}"),
+);
+
+const imagesCommerce = Object.keys(
+  import.meta.glob("/assets/pictures/commerces/*.{jpg,png,jpeg}"),
+);
+
+const imagesCity = Object.keys(
+  import.meta.glob("/assets/pictures/crecy/*.{jpg,png,jpeg}"),
+);
+const imagesParis = Object.keys(
+  import.meta.glob("/assets/pictures/paris/*.{jpg,png,jpeg}"),
+);
+const imagesTransport = Object.keys(
+  import.meta.glob("/assets/pictures/transport/*.{jpg,png,jpeg}"),
+);
 
 export default function Gallery() {
   const { translations } = useContext(LanguageContext);
