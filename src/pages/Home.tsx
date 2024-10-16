@@ -14,7 +14,7 @@ export default function Home() {
     {
       title: "Crecy La Chapelle",
       description: translations.home_description as string[],
-      image: "/src/assets/pictures/crecy/crecy4.jpg",
+      image: "/assets/pictures/crecy/crecy4.jpg",
     },
   ];
   const isCardVisible = useIntersectionObserver(cardRef, { threshold: 0.1 });
