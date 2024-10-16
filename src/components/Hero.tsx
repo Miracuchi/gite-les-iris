@@ -9,7 +9,7 @@ export default function Hero() {
       datatype="hero"
       className="relative h-[90vh] bg-cover bg-center bg-no-repeat"
       style={{
-        backgroundImage: 'url("/src/assets/pictures/bannerIris.jpg")',
+        backgroundImage: 'url("/assets/pictures/bannerIris.jpg")',
       }}
     >
       <div className="absolute inset-0 bg-black bg-opacity-50"></div>

@@ -7,7 +7,7 @@ export default function Contact() {
       className="relative min-h-screen bg-cover bg-center bg-no-repeat md:h-screen"
       style={{
         backgroundImage:
-          'url("/src/assets/pictures/studio_pictures/terrasseSousLaNeige.jpg")',
+          'url("/assets/pictures/studio_pictures/terrasseSousLaNeige.jpg")',
       }}
     >
       {/* Overlay de fond pour assombrir */}

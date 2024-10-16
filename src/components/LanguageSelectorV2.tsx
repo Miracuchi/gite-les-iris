@@ -22,10 +22,10 @@ export default function LanguageDropdownV2() {
   };
   useClickOutside(dropDownRef, setIsOpen, "dropdown-button");
   const languagesModal = [
-    { label: "en", imageSrc: "/src/assets/united-kingdom-uk-svgrepo-com.svg" },
+    { label: "en", imageSrc: "/assets/united-kingdom-uk-svgrepo-com.svg" },
     {
       label: "fr",
-      imageSrc: "/src/assets/flag-for-flag-france-svgrepo-com.svg",
+      imageSrc: "/assets/flag-for-flag-france-svgrepo-com.svg",
     },
   ];
 

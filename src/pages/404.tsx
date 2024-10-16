@@ -39,7 +39,7 @@ export default function NotFound() {
       </div>
       <div className="relative h-fit lg:flex lg:h-full lg:w-[50%]">
         <img
-          src="/src/assets/pictures/dog.png"
+          src="/assets/pictures/dog.png"
           alt="Chien"
           className="mx-auto h-full w-full"
         />
