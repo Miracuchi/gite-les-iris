@@ -1,5 +1,6 @@
 import emailjs from "emailjs-com";
 import { useContext, useState } from "react";
+import ReCAPTCHA from "react-google-recaptcha";
 import { FaUser } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import Button from "../components/Button";
@@ -13,19 +14,32 @@ export default function ContactForm({ className }: { className: string }) {
     to_name: "Aïdée",
   });
 
+  const [captchaValue, setCaptchaValue] = useState<string | null>(null);
+
+  console.log("Cap", ReCAPTCHA);
+
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const serviceID = import.meta.env.VITE_SERVICE_EMAIL_ID as string;
+  const onCaptchaChange = (value: string | null) => {
+    setCaptchaValue(value);
+    console.log("Captcha value:", value); // Vérifier que le captcha a bien été validé
+  };
 
+  const serviceID = import.meta.env.VITE_SERVICE_EMAIL_ID as string;
+  const captachApiKey = import.meta.env.VITE_PUBLIC_CAPTCHA_API_KEY;
   const templateID = import.meta.env.VITE_TEMPLATE_EMAIL_ID as string;
   const userID = import.meta.env.VITE_USER_EMAIL_ID as string;
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    if (!captchaValue) {
+      alert("Veuillez vérifier le captcha.");
+      return;
+    }
 
     emailjs
       .send(
@@ -107,6 +121,13 @@ export default function ContactForm({ className }: { className: string }) {
               required
               style={{ resize: "none", height: "auto" }}
             ></textarea>
+          </div>
+          <div>
+            <ReCAPTCHA
+              onChange={onCaptchaChange}
+              sitekey={captachApiKey}
+              className="mb-4 flex scale-x-95 justify-center md:scale-x-100"
+            />
           </div>
           <Button text={translations.send as string} type="submit" />
         </form>

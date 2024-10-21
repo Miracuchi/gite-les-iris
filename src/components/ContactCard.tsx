@@ -43,21 +43,22 @@ export default function ContactCard({
         <p>{giteAdress}</p>
         <p>{gitePostalCode}</p>
         <p className="mb-2 mt-3">{translations.phone} : </p>
-        {telTo.map((tel) => (
-          <>
-            <p className="flex items-center justify-start text-white underline lg:hover:text-iris_yellow">
-              <span className="mr-2">{tel.contactIcon}</span>
-              <a
-                href={
-                  tel.isPhone
-                    ? `tel:${tel.contactInfo}`
-                    : `mailto:${tel.contactInfo}`
-                }
-              >
-                {tel.contactInfo}
-              </a>
-            </p>
-          </>
+        {telTo.map((tel, index) => (
+          <p
+            className="flex items-center justify-start text-white underline lg:hover:text-iris_yellow"
+            key={index}
+          >
+            <span className="mr-2">{tel.contactIcon}</span>
+            <a
+              href={
+                tel.isPhone
+                  ? `tel:${tel.contactInfo}`
+                  : `mailto:${tel.contactInfo}`
+              }
+            >
+              {tel.contactInfo}
+            </a>
+          </p>
         ))}
       </div>
     </>
