@@ -39,12 +39,12 @@ yanr install
 
 3. Set your .env
 
-For this project, I used EmailJS and google Captcha
+For this project, I used EmailJS and Google Captcha
 
-VITE_SERVICE_EMAIL_ID=""
-VITE_USER_EMAIL_ID=""
-VITE_TEMPLATE_EMAIL_ID=""
-VITE_PUBLIC_CAPTCHA_API_KEY=""
+- VITE_SERVICE_EMAIL_ID=""
+- VITE_USER_EMAIL_ID=""
+- VITE_TEMPLATE_EMAIL_ID=""
+- VITE_PUBLIC_CAPTCHA_API_KEY=""
 
 4. Start the development server:
 
