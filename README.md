@@ -1,52 +1,53 @@
-# React + TypeScript + Vite
+# Gîte les Iris
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a showcase website developed using React, TypeScript, and Tailwind CSS. It is designed to be fast, responsive, and easily extendable, providing a modern and sleek user interface.
 
-Currently, two official plugins are available:
+[![homescreen](./public/assets/pictures/home.png)](https://gite-les-iris.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Demo
 
-## Expanding the ESLint configuration
+You can view the site [here](https://gite-les-iris.vercel.app/)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Features
 
-- Configure the top-level `parserOptions` property like this:
+- Responsive Design: Adapts to different devices (desktop, tablet, mobile).
+- Modern and Clean Layout: Created with Tailwind CSS for quick and efficient styling.
+- Optimized Performance: Fast load times with efficient resource management.
+- Modular Structure: Reusable TypeScript components for easier maintenance.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-});
+## Technologies Used
+
+- React - JavaScript library for building the user interface
+- TypeScript - Superset of JavaScript enabling static typing
+- Tailwind CSS - CSS framework for rapid, responsive design
+- EmailJS
+
+## Installation
+
+1. Clone the repository :
+
+```bash
+git clone https://github.com/Miracuchi/gite-les-iris.git
+cd gite-les-iris
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+2. Install dependencies:
 
-```js
-// eslint.config.js
-import react from "eslint-plugin-react";
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: "18.3" } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs["jsx-runtime"].rules,
-  },
-});
+```bash
+yanr install
 ```
 
-# gite-les-iris
+3. Set your .env
+
+For this project, I used EmailJS and google Captcha
+
+VITE_SERVICE_EMAIL_ID=""
+VITE_USER_EMAIL_ID=""
+VITE_TEMPLATE_EMAIL_ID=""
+VITE_PUBLIC_CAPTCHA_API_KEY=""
+
+4. Start the development server:
+
+```bash
+yarn run dev
+```
